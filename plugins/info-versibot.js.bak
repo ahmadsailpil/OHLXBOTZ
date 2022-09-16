@@ -18,8 +18,8 @@ const message = {
                 },
                 {
                     urlButton: {
-                        displayText: 'Donasi',
-                        url: 'https://saweria.co/asepbotz',
+                        displayText: 'Ke YouTube',
+                        url: 'https://youtube.com/channel/UCI0e4GqmeLZhy8KE8c9JPsw',
                     }
                 },
             ]
