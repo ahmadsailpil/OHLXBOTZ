@@ -189,7 +189,7 @@ if (tema == 'aud') {
   }
 handler.help = ['sewapremium']
 handler.tags = ['info']
-handler.command = ['sewapremium', 'mengproduk', 'mengorder', 'mengfake', 'menggrup', 'mengpay']
+handler.command = ['premium', 'mengproduk', 'mengorder', 'mengfake', 'menggrup', 'mengpay']
 
 export default handler
 

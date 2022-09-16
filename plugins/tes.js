@@ -17,7 +17,7 @@ Nomor: ${nomorowner}
     return conn.sendButton(m.chat, hiasan, sewa, img1, [["menu", usedPrefix + "menu"], ["profile", usedPrefix + "profile"]], m, {
         contextInfo: {
             externalAdReply: {
-                mediaUrl: "https://instagram.com/aguzfamilia",
+                mediaUrl: "https://instagram.com/ohlxmarket",
                 mediaType: "VIDEO",
                 title: hiasan,
                 body: bottime,

@@ -1,5 +1,0 @@
-blank_issues_enabled: false
-documentation:
-  - name: 📘 Documentation
-    url: https://mongoosejs.com/docs/guide.html
-    about: Mongoose Docs

@@ -11,7 +11,7 @@ let text = `${htki} RULES ${htka}
 ┃> Maka Bot Akan Banned User Permanen dan Teror virus
 `
 const templateButtons = [
-    {index: 1, urlButton: {displayText: 'Youtube', url: 'https://youtube.com/channel/UCACHvReRmw2fxgMutPFCBWg'}},
+    {index: 1, urlButton: {displayText: 'Youtube', url: 'https://youtube.com/channel/UCI0e4GqmeLZhy8KE8c9JPsw'}},
 ]
 let tm = {
 text: text,
