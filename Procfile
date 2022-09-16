@@ -1,2 +1,2 @@
 web: npm start
-worket: npm start
+worker: npm start
