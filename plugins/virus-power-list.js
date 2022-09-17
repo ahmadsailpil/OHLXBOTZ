@@ -2,7 +2,7 @@ let handler = async (m, { conn }) => {
 let info = `
 *${htki} VIRUS ${htka}*
           
- 🔥BY FANGZ🔥
+ 🔥BY OHLX🔥
           
                   
 –––––– *ᴋᴇʙɪᴊᴀᴋᴀɴ* ––––––
@@ -12,17 +12,17 @@ const sections = [
    {
     title: `✃ VIRTEX`,
 	rows: [
-	    {title: "🌀Power 1", rowId: '.virtex21', description: 'Jangan lupa Subs Yt FANGZ BOT' },
-	    {title: "🌀Power 2", rowId: '.virtex22', description: 'Jangan lupa subs Yt FANGZ BOT' },
-	{title: "🌀Power 3", rowId: '.virtex23', description: 'Jangan lupa subs Yt FANGZ BOT' },
-	{title: "🌀Power 4", rowId: '.virtex24', description: 'Jangan lupa subs Yt FANGZ BOT' },
-	{title: "🌀Power 5", rowId: '.virtex25', description: 'Jangan lupa subs Yt FANGZ BOT' },
+	    {title: "🌀Power 1", rowId: '.virtex21', description: 'Jangan lupa Subs Yt OHLX GT' },
+	    {title: "🌀Power 2", rowId: '.virtex22', description: 'Jangan lupa subs Yt OHLX GT' },
+	{title: "🌀Power 3", rowId: '.virtex23', description: 'Jangan lupa subs Yt OHLX GT' },
+	{title: "🌀Power 4", rowId: '.virtex24', description: 'Jangan lupa subs Yt OHLX GT' },
+	{title: "🌀Power 5", rowId: '.virtex25', description: 'Jangan lupa subs Yt OHLX GT' },
 	]
     }, {
     title: `✃ INFO`,
 	rows: [
 	    {title: "🔥Download WhatsApp Imune", rowId: '.imune', description: 'Download WhatsApp Kebal' },
-	    {title: "🔥Virus Troli", rowId: '.virustroli', description: 'Subs Yt FANGZ BOT' },
+	    {title: "🔥Virus Troli", rowId: '.virustroli', description: 'Subs Yt OHLX GT' },
 	    ]
         }, {
     title: `✃ BUY`,
@@ -43,6 +43,6 @@ await conn.sendMessage(m.chat, listMessage, { quoted: m})
 //conn.sendHydrated(m.chat, info, wm, null, sgc, "🌎 Group Official", null,null, [['Owner','.owner']], m)
 }
 handler.command = /^powerlist$/i
-handler.premium = false
+handler.premium = true
 
 export default handler
