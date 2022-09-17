@@ -41,7 +41,7 @@ Contoh: .menfess 628xxxxxxxxxx|hai owner`
 handler.help = ['menfess nomor|pesan']
 handler.tags = ['premium']
 
-handler.command = /^(menfess|confess|menfes|confes)$/i
+handler.command = /^(menfess|confess|menfes|chat)$/i
 
 handler.limit = true
 handler.private = true
