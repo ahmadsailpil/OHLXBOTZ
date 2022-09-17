@@ -1,35 +1,45 @@
-import fetch from 'node-fetch'
-let list = [
-	'Twilight Sparkle', 'Fluttershy', 'Rarity', 'Rainbow Dash', 'Pinkie Pie', 'Applejack', 'SpongeBob SquarePants',
-	'Kyu Sugardust', 'Rise Kujikawa', 'Sunset Shimmer', 'Adagio Dazzle', 'Aria Blaze', 'Sonata Dusk',
-	'Miss Pauling', 'Scout', 'Soldier', 'Demoman', 'Heavy', 'Engineer', 'Medic', 'Sniper', 'Spy'
-]
+import gtts from 'node-gtts'
+import { readFileSync, unlinkSync } from 'fs'
+import { join } from 'path'
 
+const defaultLang = 'id'
 let handler = async (m, { conn, args, usedPrefix, command }) => {
-	let [chara, text] = args.join` `.split`|`
-	if (!(chara && text)) throw `Ex: ${usedPrefix + command} fluttershy|hello world`
-	let res = await tts(chara, text)
-	await conn.sendMessage(m.chat, { audio: { url: res }, ptt: true, mimetype: 'audio/mpeg' }, { quoted: m })
+
+  let lang = args[0]
+  let text = args.slice(1).join(' ')
+  if ((args[0] || '').length !== 2) {
+    lang = defaultLang
+    text = args.join(' ')
+  }
+  if (!text && m.quoted?.text) text = m.quoted.text
+
+  let res
+  try { res = await tts(text, lang) }
+  catch (e) {
+    m.reply(e + '')
+    text = args.join(' ')
+    if (!text) throw `Use example ${usedPrefix}${command} en hello world`
+    res = await tts(text, defaultLang)
+  } finally {
+    if (res) conn.sendFile(m.chat, res, 'tts.opus', null, m, true)
+  }
 }
-handler.help = ['tts']
-handler.tags = ['misc']
-handler.command = /^(tts)$/i
+handler.help = ['tts <lang> <teks>']
+handler.tags = ['tools']
+handler.command = /^g?tts$/i
 
 export default handler
 
-async function tts(chara, text) {
-	let character = list.findIndex(v => v.toLowerCase() == chara.toLowerCase())
-	if (character == -1) throw `Character "${chara}" not found!\n\nList Characters:\n\n${list.join('\n')}`
-	character = list[character]
-	// if (text?.length < 5) throw 'Not enough text, minimum 5 characters' 
-	let res = await fetch('https://api.15.ai/app/getAudioFile5', {
-		method: 'post',
-		headers: {
-			'content-type': 'application/json' 
-		},
-		body: JSON.stringify({ text, character, emotion: 'Contextual' })
-	})
-	if (res.status !== 200) throw res.statusText
-	let json = await res.json()
-	return `https://cdn.15.ai/audio/${json.wavNames[0]}`
+function tts(text, lang = 'id') {
+  console.log(lang, text)
+  return new Promise((resolve, reject) => {
+    try {
+      let tts = gtts(lang)
+      let filePath = join(global.__dirname(import.meta.url), '../tmp', (1 * new Date) + '.wav')
+      tts.save(filePath, text, () => {
+        resolve(readFileSync(filePath))
+        unlinkSync(filePath)
+      })
+    } catch (e) { reject(e) }
+  })
 }
