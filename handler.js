@@ -1059,8 +1059,8 @@ ${nmsr} Perintah ini hanya dapat digunakan di Chat Pribadi !`,
 ${nmsr} Perintah ini hanya untuk *Admin* grup !`,
         botAdmin: `*${htki} 𝗜𝗡𝗙𝗢 ${htka}*\n
 ${nmsr} Jadikan bot sebagai *Admin* untuk menggunakan perintah ini !`,
-        unreg: `*${htki} 𝗦𝗘𝗥𝗩𝗘𝗥 ${htka}*\n
-${nmsr} Silahkan daftar ke database terlebih dahulu untuk menggunakan bot ini lebih lanjut *tekan:*\n\n*DAFTAR* WAJIB JOIN GRUB BOT`,
+        unreg: `*${htki} 𝗩𝗘𝗥𝗜𝗙𝗬 ${htka}*\n
+${nmsr} Silahkan daftar ke database terlebih dahulu untuk menggunakan bot ini lebih lanjut *tekan: DAFTAR*\n\nWAJIB JOIN GRUB`,
         nsfw: `*${htki} 𝗜𝗡𝗙𝗢 ${htka}*\n
 ${nmsr} NSFW tidak aktif, Silahkan hubungi Team Bot Discussion untuk mengaktifkan fitur ini !`,
         rpg: `*${htki} 𝗜𝗡𝗙𝗢 ${htka}*\n
@@ -1068,7 +1068,7 @@ ${nmsr} RPG tidak aktif, Silahkan hubungi Team Bot Discussion Untuk mengaktifkan
         restrict: `*${htki} 𝗜𝗡𝗙𝗢 ${htka}*\n
 ${nmsr} Fitur ini di *disable* !`
     }[type]
-    if (msg) return conn.sendButton(m.chat, hiasan, msg, thumbEror, [['SEWA BOT', '.sewabot'],['DAFTAR', '.daftar'],['WAJIB JOIN GRUB', '.gcbot']],m)
+    if (msg) return conn.sendButton(m.chat, hiasan, msg, thumbEror, [['𝗗𝗔𝗙𝗧𝗔𝗥', '.daftar'],['𝗦𝗘𝗪𝗔 𝗕𝗢𝗧', '.sewa'],['𝗝𝗢𝗜𝗡 𝗚𝗥𝗨𝗕', '.gcbot']],m)
 }
     
 let file = global.__filename(import.meta.url, true)
