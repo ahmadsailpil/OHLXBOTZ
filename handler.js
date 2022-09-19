@@ -1043,32 +1043,32 @@ dfail
 global.dfail = (type, m, conn) => {
     let nmsr = `👋 Hai *@${m.sender.split("@")[0]}*, `
     let msg = {
-        rowner: `*${htki} 𝗜𝗡𝗙𝗢 ${htka}*\n
+        rowner: `*${htki} INFO ${htka}*\n
 ${nmsr} Perintah ini hanya dapat digunakan oleh *OWWNER* !`,
-        owner: `*${htki} 𝗜𝗡𝗙𝗢 ${htka}*\n
+        owner: `*${htki} INFO ${htka}*\n
 ${nmsr} Perintah ini hanya dapat digunakan oleh *Owner Bot* !`,
-        mods: `*${htki} 𝗜𝗡𝗙𝗢 ${htka}*\n
+        mods: `*${htki} INFO ${htka}*\n
 ${nmsr} Perintah ini hanya dapat digunakan oleh *Moderator* !`,
-        premium: `*${htki} 𝗜𝗡𝗙𝗢 ${htka}*\n
+        premium: `*${htki} INFO ${htka}*\n
 ${nmsr} Perintah ini hanya untuk member *Premium* !`,
-        group: `*${htki} 𝗜𝗡𝗙𝗢 ${htka}*\n
+        group: `*${htki} INFO ${htka}*\n
 ${nmsr} Perintah ini hanya dapat digunakan di grup !`,
-        private: `*${htki} 𝗜𝗡𝗙𝗢 ${htka}*\n
+        private: `*${htki} INFO ${htka}*\n
 ${nmsr} Perintah ini hanya dapat digunakan di Chat Pribadi !`,
-        admin: `*${htki} 𝗜𝗡𝗙𝗢 ${htka}*\n
+        admin: `*${htki} INFO ${htka}*\n
 ${nmsr} Perintah ini hanya untuk *Admin* grup !`,
-        botAdmin: `*${htki} 𝗜𝗡𝗙𝗢 ${htka}*\n
+        botAdmin: `*${htki} INFO ${htka}*\n
 ${nmsr} Jadikan bot sebagai *Admin* untuk menggunakan perintah ini !`,
-        unreg: `*${htki} 𝗩𝗘𝗥𝗜𝗙𝗬 ${htka}*\n
+        unreg: `*${htki} VERIFY ${htka}*\n
 ${nmsr} Silahkan daftar ke database terlebih dahulu untuk menggunakan bot ini lebih lanjut *tekan: DAFTAR*\n\nWAJIB JOIN GRUB`,
-        nsfw: `*${htki} 𝗜𝗡𝗙𝗢 ${htka}*\n
+        nsfw: `*${htki} INFO ${htka}*\n
 ${nmsr} NSFW tidak aktif, Silahkan hubungi Team Bot Discussion untuk mengaktifkan fitur ini !`,
-        rpg: `*${htki} 𝗜𝗡𝗙𝗢 ${htka}*\n
+        rpg: `*${htki} INFO ${htka}*\n
 ${nmsr} RPG tidak aktif, Silahkan hubungi Team Bot Discussion Untuk mengaktifkan fitur ini !`,
-        restrict: `*${htki} 𝗜𝗡𝗙𝗢 ${htka}*\n
+        restrict: `*${htki} INFO ${htka}*\n
 ${nmsr} Fitur ini di *disable* !`
     }[type]
-    if (msg) return conn.sendButton(m.chat, hiasan, msg, thumbEror, [['𝗗𝗔𝗙𝗧𝗔𝗥', '.daftar'],['𝗦𝗘𝗪𝗔 𝗕𝗢𝗧', '.sewa'],['𝗝𝗢𝗜𝗡 𝗚𝗥𝗨𝗕', '.gcbot']],m)
+    if (msg) return conn.sendButton(m.chat, hiasan, msg, thumbEror, [['DAFTAR', '.daftar'],['SEWA BOT', '.sewa'],['JOIN GRUP', '.gcbot']],m)
 }
     
 let file = global.__filename(import.meta.url, true)
