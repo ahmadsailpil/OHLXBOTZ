@@ -5,13 +5,13 @@ let sh = '5'
 let sn = '10'
 let ss = '20'
 let sp = '35'
-let sv = '50'
+let sv = '40'
 //premium
 let ph = '5'
 let pn = '10'
 let pp = '25'
 let pv = '35'
-let ppm = '40'
+let ppm = '35'
 let info = `
 ╭━━━━「 *SEWA* 」
 ┊⫹⫺ *Hemat:* _${sh}k/grup (15 Hari)_
@@ -54,16 +54,16 @@ const sections = [
    {
 	title: `${htjava} SEWA ✦-------`,
 	rows: [
-	    {title: "🔖 HEMAT", rowId: '.order *Paket:* HEMAT • Sewa', description: 'PRICE: ' + sh + 'k (15 Hari)' },
-	    {title: "🔖 NORMAL", rowId: '.order *Paket:* NORMAL • Sewa', description: 'PRICE: ' + sn + 'k (1 bulan)' },
-	{title: "🔖 Permanen", rowId: '.order *Paket:* VIP • Sewa', description: 'PRICE: ' + sv + 'k (Permanen)' },
+	    {title: "🔖 HEMAT", rowId: '.order *Paket:* 5K • Sewa', description: 'PRICE: ' + sh + 'k (15 Hari)' },
+	    {title: "🔖 NORMAL", rowId: '.order *Paket:* 10K • Sewa', description: 'PRICE: ' + sn + 'k (1 bulan)' },
+	{title: "🔖 Permanen", rowId: '.order *Paket:* 40K • Sewa', description: 'PRICE: ' + sv + 'k (Permanen)' },
 	]
     }, {
     title: `${htjava} PREMIUM ✦-------`,
 	rows: [
-	    {title: "🌟 HEMAT", rowId: '.order *Paket:* HEMAT • Premium', description: 'PRICE: ' + ph + 'k (15 Hari)' },
-	    {title: "🌟 NORMAL", rowId: '.order *Paket:* NORMAL • Premium', description: 'PRICE: ' + pn + 'k (1 bulan)' },
-	{title: "🌟 PERMANENT", rowId: '.order *Paket:* PERMANENT • Premium', description: 'PRICE: ' + ppm + 'k (UNLIMITED)' },
+	    {title: "🌟 HEMAT", rowId: '.order *Paket:* 5K • Premium', description: 'PRICE: ' + ph + 'k (15 Hari)' },
+	    {title: "🌟 NORMAL", rowId: '.order *Paket:* 10K • Premium', description: 'PRICE: ' + pn + 'k (1 bulan)' },
+	{title: "🌟 PERMANENT", rowId: '.order *Paket:* 35K • Premium', description: 'PRICE: ' + ppm + 'k (UNLIMITED)' },
 	]
     },
 ]
