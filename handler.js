@@ -1059,8 +1059,6 @@ ${nmsr} Perintah ini hanya dapat digunakan di Chat Pribadi !`,
 ${nmsr} Perintah ini hanya untuk *Admin* grup !`,
         botAdmin: `*${htki} INFO ${htka}*\n
 ${nmsr} Jadikan bot sebagai *Admin* untuk menggunakan perintah ini !`,
-        unreg: `*${htki} VERIFY ${htka}*\n
-${nmsr} Silahkan daftar ke database terlebih dahulu untuk menggunakan bot ini lebih lanjut *tekan: DAFTAR*\n\nWAJIB JOIN GRUB`,
         nsfw: `*${htki} INFO ${htka}*\n
 ${nmsr} NSFW tidak aktif, Silahkan hubungi Team Bot Discussion untuk mengaktifkan fitur ini !`,
         rpg: `*${htki} INFO ${htka}*\n
@@ -1070,6 +1068,13 @@ ${nmsr} Fitur ini di *disable* !`
     }[type]
     if (msg) return conn.sendButton(m.chat, hiasan, msg, thumbEror, [['DAFTAR', '.daftar'],['SEWA BOT', '.sewa'],['JOIN GROUP', '.gcbot']],m)
 }
+
+    let msgg = {
+    	unreg: 'ʜᴀʟʟᴏ ᴋᴀᴋ 👋\nᴀɴᴅᴀ ʜᴀʀᴜs ᴍᴇɴᴅᴀғᴛᴀʀ ᴋᴇ ᴅᴀᴛᴀʙᴀsᴇ ʙᴏᴛ ᴅᴜʟᴜ sᴇʙᴇʟᴜᴍ ᴍᴇɴɢɢᴜɴᴀᴋᴀɴ ғɪᴛᴜʀ ɪɴɪ\n\n➞ ᴋʟɪᴄᴋ ᴛᴏᴍʙᴏʟ ᴅɪʙᴀᴡᴀʜ ᴜɴᴛᴜᴋ ᴍᴇɴᴅᴀғᴛᴀʀ ᴋᴇ ᴅᴀᴛᴀʙᴀsᴇ ʙᴏᴛ'
+}[type]
+if (msgg) return conn.sendButton(m.chat, `${global.htki} VERIFY ${global.htka}`, msgg, null, ['- ᴠᴇʀɪғʏ -', '/verify'],m)
+}
+
     
 let file = global.__filename(import.meta.url, true)
 watchFile(file, async () => {
