@@ -95,7 +95,7 @@ global.owner = [
   ['6283160327945', 'OHLX ! 🥶', true] //Ini buat kamu!
   // [number, dia creator/owner?, dia developer?]
 ] // Put your number here
-global.mods = [] // Want some help?
+global.owner2 = ['6283848128003'] // Want some help?
 global.prems = [] // Jangan di isi, Tambahin dari bot nya ketik .addprem @OHLX 15
 
 
