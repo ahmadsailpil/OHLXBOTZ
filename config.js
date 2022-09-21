@@ -95,7 +95,7 @@ global.owner = [
   ['6283160327945', 'OHLX ! 🥶', true] //Ini buat kamu!
   // [number, dia creator/owner?, dia developer?]
 ] // Put your number here
-global.owner = [
+global.ownep = [
   [''], //Owner1
   [''], //Owner2
   [''], //Owner3
