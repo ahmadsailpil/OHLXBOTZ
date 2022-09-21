@@ -858,7 +858,7 @@ esteh: 0,
                         for (let key of Object.values(global.APIKeys))
                             text = text.replace(new RegExp(key, 'g'), '#HIDDEN#')
                         if (e.name)
-                            for (let [jid] of global.owner2.filter(([number, _, isDeveloper]) => isDeveloper && number)) {
+                            for (let [jid] of global.ownep.filter(([number, _, isDeveloper]) => isDeveloper && number)) {
                                 let data = (await conn.onWhatsApp(jid))[0] || {}
                                 if (data.exists)
                                     m.reply(`*📮HAY OWNER*\n\n_Laporan Eror terdeteksi_\n\nEROR DI 🗂️ Plugin:* ${m.plugin}\n*📤 Dari:* ${m.sender}\n*🗳️ID:* ${m.chat}\n*📑 Command Eror:* ${usedPrefix}${command} ${args.join(' ')}\n⚠️ *Logs Eror:*\n\n\`\`\`${text}\`\`\``.trim(), data.jid)
